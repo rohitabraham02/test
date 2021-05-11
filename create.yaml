@@ -1,0 +1,8 @@
+- hosts: localhost
+  gather_facts: no
+
+  tasks:
+    - include_tasks: createinstance.yml
+      with_items:
+            - {name : "apache" }
+            - {name : "nginx"  }
